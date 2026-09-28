@@ -1,0 +1,377 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body {
+background-color: #f4f5f7;
+color: #222;
+}
+
+/* MENU LATERAL */
+
+.menu {
+width: 240px;
+height: 100vh;
+
+background-color: #171717;
+
+position: fixed;
+left: 0;
+top: 0;
+
+padding: 25px 15px;
+
+
+}
+
+.logo {
+color: white;
+font-size: 24px;
+font-weight: bold;
+
+text-align: center;
+
+margin-bottom: 40px;
+
+
+}
+
+.menu a {
+display: block;
+
+text-decoration: none;
+
+color: #ccc;
+
+padding: 14px 15px;
+
+margin-bottom: 8px;
+
+border-radius: 8px;
+
+transition: 0.3s;
+
+
+}
+
+.menu a:hover {
+background-color: #333;
+color: white;
+}
+
+.menu .sair {
+margin-top: 30px;
+background-color: #b91c1c;
+color: white;
+}
+
+.menu .sair:hover {
+background-color: #dc2626;
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+margin-left: 240px;
+padding: 30px;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+background-color: white;
+
+padding: 25px;
+
+border-radius: 12px;
+
+margin-bottom: 25px;
+
+box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+
+
+}
+
+.cabecalho h1 {
+margin-bottom: 8px;
+}
+
+.cabecalho p {
+color: #666;
+}
+
+/* CARDS */
+
+.cards {
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 20px;
+
+margin-bottom: 25px;
+
+
+}
+
+.card {
+background-color: white;
+
+padding: 25px;
+
+border-radius: 12px;
+
+box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+
+
+}
+
+.card h2 {
+font-size: 16px;
+
+color: #777;
+
+margin-bottom: 10px;
+
+
+}
+
+.card strong {
+font-size: 30px;
+}
+
+/* ÁREA PRINCIPAL */
+
+.area {
+background-color: white;
+
+padding: 30px;
+
+border-radius: 12px;
+
+box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+
+
+}
+
+.area h2 {
+margin-bottom: 15px;
+}
+
+.area p {
+color: #666;
+
+line-height: 1.6;
+
+
+}
+
+/* ========================= /
+/ LISTA DE ALUNOS /
+/ ========================= */
+
+/* TÍTULO DA LISTA */
+
+.area h1 {
+margin-bottom: 20px;
+
+color: #171717;
+
+font-size: 28px;
+
+
+}
+
+/* BOTÃO NOVO ALUNO */
+
+.area > a[href="cadastrar.php"] {
+display: inline-block;
+
+background-color: #2563eb;
+
+color: white;
+
+text-decoration: none;
+
+padding: 12px 20px;
+
+border-radius: 8px;
+
+margin-bottom: 20px;
+
+font-weight: bold;
+
+transition: 0.3s;
+
+
+}
+
+.area > a[href="cadastrar.php"]:hover {
+background-color: #1d4ed8;
+}
+
+/* TABELA */
+
+.area table {
+width: 100%;
+
+border-collapse: collapse;
+
+background-color: white;
+
+border: none;
+
+border-radius: 10px;
+
+overflow: hidden;
+
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+
+}
+
+/* CABEÇALHO DA TABELA */
+
+.area table th {
+background-color: #171717;
+
+color: white;
+
+padding: 15px;
+
+text-align: left;
+
+font-size: 15px;
+
+
+}
+
+/* CÉLULAS */
+
+.area table td {
+padding: 14px 15px;
+
+border-bottom: 1px solid #e5e7eb;
+
+color: #444;
+
+
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.area table tr:hover td {
+background-color: #f8fafc;
+}
+
+/* ÚLTIMA LINHA */
+
+.area table tr:last-child td {
+border-bottom: none;
+}
+
+/* LINKS DE AÇÃO */
+
+.area table td a {
+display: inline-block;
+
+text-decoration: none;
+
+padding: 7px 12px;
+
+border-radius: 6px;
+
+margin-right: 5px;
+
+font-size: 14px;
+
+font-weight: bold;
+
+transition: 0.3s;
+
+
+}
+
+/* BOTÃO EDITAR */
+
+.area table td a[href*="editar.php"] {
+background-color: #2563eb;
+
+color: white;
+
+
+}
+
+.area table td a[href*="editar.php"]:hover {
+background-color: #1d4ed8;
+}
+
+/* BOTÃO EXCLUIR */
+
+.area table td a[href*="excluir.php"] {
+background-color: #dc2626;
+
+color: white;
+
+
+}
+
+.area table td a[href*="excluir.php"]:hover {
+background-color: #b91c1c;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+.menu {
+    width: 190px;
+}
+
+.conteudo {
+    margin-left: 190px;
+}
+
+.cards {
+    grid-template-columns: 1fr;
+}
+
+.area {
+    padding: 20px;
+}
+
+.area table {
+    font-size: 14px;
+}
+
+
+}
+
+@media (max-width: 600px) {
+
+.menu {
+    width: 160px;
+}
+
+.conteudo {
+    margin-left: 160px;
+    padding: 15px;
+}
+
+.area {
+    padding: 15px;
+}
+
+.area table {
+    display: block;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+}
+
+
+}
